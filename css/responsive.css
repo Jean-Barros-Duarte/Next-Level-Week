@@ -1,0 +1,58 @@
+@media (max-width: 900px){/*quando a pagina chegar nos 900px faça....*/
+
+    #page-home{/*TIRANDO A IMG*/
+        background-position-x: 70vw;
+    }
+
+    #page-home .conteudo{/*JOGANDO O CONTEUDO NO CENTRO*/
+        align-items: center;
+        text-align: center;
+    }
+
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+
+    #page-home main {/*JOGANDO O CONTEUDO NO CENTRO*/
+        align-items: center;
+    }
+}
+
+@media(min-width: 1700px){
+    #page-home {
+        background-position-x: 40vw;
+    }
+}
+
+@media(max-height: 760px){/*faça... de 0 ate 760px*/
+    #page-home{
+        background-position-y: 200px;/*deixa a img parada em 200px*/
+    }
+
+}
+
+
+/*feito por Nickzoun: https://github.com/Nickzoun/NLW */
+@media (max-width: 410px) {
+    #page-home main h1 {
+        font-size: 2.9em;
+    }
+}
+
+@media (max-width: 470px) {
+    #page-home main h1 {
+        font-size: 2.3em;
+    }
+
+    #page-home main p {
+        font-size: 1.2em;
+    }
+}
+/*feito por Nickzoun: https://github.com/Nickzoun/NLW */
+
+
