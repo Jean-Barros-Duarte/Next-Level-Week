@@ -4,6 +4,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;/*poe q o limite da formulario é ate a borda */
 }
 
 :root{
@@ -15,7 +16,7 @@ html{
     font-family: "Roboto", "sans-serifa";
 }
 body{
-    background: #f0f0f5;
+    background: #e6e6ec;
 }
 
 a{
