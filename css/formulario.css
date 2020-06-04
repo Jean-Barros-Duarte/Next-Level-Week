@@ -1,5 +1,5 @@
 form {
-    background-color: #dadada;
+    background-color: #d1cfcf;
 
     margin: 80px auto;
     padding: 64px;/*preenchimento ou seja, ele preenche a pagina*/
@@ -91,10 +91,74 @@ form button {
     border: 0px;
 
     margin-top: 40px;
+
+    cursor: pointer;
 }
 
 form button:hover{
-    background: #e218d8;
+    background: var(--cor-butaoClicado);
     transition: background-color 0.7s;
+
 }
 
+
+
+
+/*================================================= ITENS DE COLETA =================================================*/
+
+.itens-grid{
+    /*GRID: é multidimencional, já o FLEX: é unidemencional, ou seja, vai ficar um ao lado do outro, ou vai ficar um em baixo do outro*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;/*gap serve para dar margem no grid*/
+}
+
+
+.itens-grid li{
+    background-color: #a4eca055;
+    list-style: none;
+    height: 160px;
+
+    border: 2px solid #a4eca055;
+    border-radius: 8px;
+
+    padding: 32px 24px 16px;
+
+    /*alinha os itens e flex, coloca ele como colunas, alinha ao centro e da um espaço entre eles*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.itens-grid li span{
+/*Alinhando os titulos*/
+    margin-top: 11px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.itens-grid li:hover{
+    background-color: #f5f5;
+    transition: 0.5s;
+    
+}
+
+
+.itens-grid li.selected{
+    /*quando junta o li.selected quer dizer para procurar somente o li q tem .selected
+        quando esta separado é outro significado, ou seja, esta procurando dentro do li algum elemente q tem classe .selected
+    */
+    background: #58e218;
+    border: 2px solid #58e218;
+}
+
+
+
+.itens-grid li img, .itens-grid li span{
+    pointer-events: none;/*Nao vai receber o evento de click do mouse, ou seja, ele nao sera mostrado quando clicado*/
+}

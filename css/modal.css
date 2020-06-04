@@ -1,0 +1,105 @@
+
+:root{
+    --cor-tituto02: #fff
+}
+
+#modal{
+    background-color: #0e0a14ef;
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.6s;
+
+}
+
+
+#modal .content{
+    color: var(--cor-tituto02);
+
+    width: 420px;
+}
+
+#modal .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 48px;
+}
+
+
+#modal .header a {
+    background-image: url("../img/x.svg");
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    font-size: 0.01px;/*SERVE PARA QUANDO O LEITOR ESTIVER EM UMA TELA PEQUENA CONSEGUIR VER O BUTTON DE FECHAR*/
+}
+
+
+#modal .header h1 {
+    color: var(--cor-tituto02);
+
+    font-size: 36px;
+    line-height: 42px;
+}
+
+
+#modal form label{
+    font-size: 14px;
+    line-height: 16px;
+
+    /*tem q botar o display para q o margin possa funcionar, se nao por o display block ele assumira o inline como paddrao*/
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+#modal form .field{
+    display: flex;
+}
+
+#modal form input {
+    flex: 1;
+    background: #f0f0f5;
+
+    border-radius: 8px 0 0 8px;
+    border: 0;
+    padding: 16px 24px;
+
+    font-size: 16px;
+
+    color: #6c6c80;
+}
+
+
+#modal form button{
+        width: 72px;
+        height: 72px;
+
+        background-color: var(--cor-primaria);
+
+        border: 0;
+        border-radius: 0px 8px 8px 0;
+
+        cursor: pointer;
+}
+
+#modal form button:hover{
+    background-color: var(--cor-butaoClicado);
+    transition: background-color 0.7s;
+}
+
+
+#modal.hide{
+    display: none;
+}

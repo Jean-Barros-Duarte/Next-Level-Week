@@ -8,8 +8,10 @@
 }
 
 :root{
-    --cor-titulo:#322153;
+    --cor-titulo:#67226d;
     --cor-primaria: #34cb79;
+
+    --cor-butaoClicado: #d52bdb;
 }
 
 html{
@@ -17,6 +19,7 @@ html{
 }
 body{
     background: #e6e6ec;
+ /* background: #128b22;*/
 }
 
 a{
@@ -66,7 +69,7 @@ a{
  
  
  #page-home main a:hover{
-     background: #d52bdb;
+     background:var(--cor-butaoClicado);
      transition: 1.5s;
  }
  

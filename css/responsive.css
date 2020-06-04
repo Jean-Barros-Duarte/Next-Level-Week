@@ -21,6 +21,15 @@
     #page-home main {/*JOGANDO O CONTEUDO NO CENTRO*/
         align-items: center;
     }
+
+    #page-search-results .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #page-search-results .cards img {
+       height: 300px;
+
+    }
 }
 
 @media(min-width: 1700px){
@@ -35,7 +44,6 @@
     }
 
 }
-
 
 /*feito por Nickzoun: https://github.com/Nickzoun/NLW */
 @media (max-width: 410px) {
