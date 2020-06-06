@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+<!-- VAI PEGAR TUDO QUE FOI COLOCADO NO "layout.html" E PUXAR PRA CA! -->
+
+{#CRIANDO UMA VARIAVEL CHAMADA ""page-home"" PARA COLOCAR NO LAYOUT#}
+{% set pageId = "page-home" %}
+
+{% block css %}
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/modal.css"/>
+{% endblock css %}
+
+{#<div id="page-home">#}
+{% block content %}
+    <div class="conteudo">
+        <header>
+            <img src="img/logo.svg" alt="Logomarca-do-site">
+            <!-- ANTES DE USAR NODE: <a href="create-point.html"><span></span>cadastre um ponto de coleta</a>-->
+            <a href="/create-point">
+                <span></span>cadastre um ponto de coleta</a>
+        </header>
+
+        <main>
+            <h1>Seu marketplace de coleta de resíduos</h1>
+            <!-- essa var funciona por causa do nunjucks -->
+            <!-- <h1>{{title}}</h1>-->
+            <!-- essa var funciona por causa do nunjucks -->
+
+            <p>Ajudamos pessoas a encontrarem pontos de coletas de forma eficiente.</p>
+
+            <a href="#">
+                <span></span>
+                <strong>pontos de coletas</strong>
+            </a>
+        </main>
+    </div>
+{% endblock content %}
+
+{#</div>#}
+
+{% block modal %}
+    <!-- PARA ABRIR UM POP-UP -->
+    <div id="modal" class="hide">
+        <div class="content">
+            <div class="header">
+                <h1>Pontos de coleta</h1>
+                <a href="#">Fechar</a>
+            </div>
+
+            <!-- ANTES DO nunjucks: <form action="search-results.html">-->
+            <form action="/search-results">
+                <label for="search">Cidade:</label>
+                <div class="search field">
+                    <input type="text" name="search" placeholder="Digite a Cidade"/>
+                    <button>
+                        <img src="img/search.svg" alt="Buscar"/>
+
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- PARA ABRIR UM POP-UP -->
+{% endblock modal %}
+
+{% block js %}
+    <script src="js/index.js"></script>
+{% endblock js %}

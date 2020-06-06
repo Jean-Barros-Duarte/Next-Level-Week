@@ -1,0 +1,14 @@
+{# ISSO SE CHAMA INCLUDE, FUNCIONA POR CAUSA DE NUNJUCKS ELE SERVE PARA 
+GUARDAR ELEMENTOS REPETIDOS DO HTML EM UMA PASTA E DPOIS CHAMA-LAS ATRAVES DO
+ {% include "parte/page-home-header.html" %} COLOCANDO-AS NO LUGAR EM Q ESTAVA O ELEMENTO REPETIDO,
+  OU SEJA, ELE É CHAMADO ATRAVES DO PARAMETRO include E DENTRO DE ""
+   VC PASSA O CAMIHNHO ONDE FOI GUARDADO O ELEMENTO REPETIDO
+
+<!-- obs>: O INCLUDE SO SERVE PARA TRECHOS PEQUENOS -->#}
+
+<header>
+    <img src="img/logo.svg" alt="Logomarca-do-site">
+    <!-- ANTES DE USAR NODE: <a href="index.html"><span></span>Volte para home</a>-->
+    <a href="/">
+        <span></span>Volte para home</a>
+</header>

@@ -1,0 +1,33 @@
+{#EXTENDS FAZ A MESMA COISA Q O INCLUDE SO QUE É BOM PARA GRANDES PARTES DE CODIGOS#}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {#ESSE TITULO ESTA COMO PREENCHIMENTO PADRAAO, POIS QUANDO NAO TIVER TITULO NA PAG, ESSE VAI ASSUMIR AUTO#}
+        {% block title %}
+            <title>Ecoleta</title>
+        {% endblock title %}
+
+        <link rel="icon" href="img/icon-reclicagem.png" type="image-icon"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        {#PROCURA NA PAGINA SE TEM UM BLOCO IGUAL E SE ACHAR, ELE VAI PUXAR TODO O CODIGO DENTRO DELE PARA CAA #}
+        {% block css %}{% endblock css %}
+        <link rel="stylesheet" href="css/responsive.css"/>
+
+    </head>
+
+    <body>
+        {#A VARIAVEL ESTA DANDO UMA RESPOSTA#}
+        <div id="{{pageId}}">
+            {% block content %}{% endblock content %}
+        </div>
+
+        {% block modal %}{% endblock modal %}
+
+        {% block js %}{% endblock js %}
+    </body>
+
+</html>
